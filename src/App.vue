@@ -1,25 +1,28 @@
 <template>
-  <div id="app">
-
+  <div
+    id="app"
+    class="container"
+  >
+    <MenuBar title="TestMenu" />
+    <Hero
+      title="Der EMI-Award - MeetUp der digitalen Generation"
+      description="Hier treffen sich zukünftige Systemarchitekten, Spieleentwickler, Webdesigner, Medienpsychologen und UX-Experten."
+    />
   </div>
 </template>
 
 <script>
+const MenuBar = () => import("./components/MenuBar/MenuBar");
+const Hero = () => import("./components/Hero/Hero");
 
 export default {
   name: 'app',
   components: {
+    MenuBar,
+    Hero
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
 </style>
