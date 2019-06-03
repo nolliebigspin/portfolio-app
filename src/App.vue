@@ -16,7 +16,7 @@ const MenuBar = () => import("./components/MenuBar/MenuBar");
 const Hero = () => import("./components/Hero/Hero");
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
     MenuBar,
     Hero
