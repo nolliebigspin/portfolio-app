@@ -4,6 +4,12 @@
     id="app"
     class="container"
   >
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    >
     <MenuBar title="TestMenu" />
     <Hero
       title="Der EMI-Award - MeetUp der digitalen Generation"
@@ -13,6 +19,8 @@
       motto="Beyond Surface"
       date="2019"
     />
+    <Teaser />
+    <Teaser />
   </div>
 </template>
 

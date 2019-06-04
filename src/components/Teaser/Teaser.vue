@@ -21,6 +21,18 @@
             <span class="tag">T-Shirt</span>
           </span>
           <br>
+          <a
+            class="icon is-medium has-badge-rounded"
+            data-badge="9"
+          >
+            <i class="fas fa-heart fa-3x"></i>
+          </a>
+
+          <a
+            class="icon is-medium has-badge-rounded"
+            data-badge="8"
+          ><i class="fas fa-comment fa-3x"></i>
+          </a>
         </span>
       </section>
     </section>
@@ -55,5 +67,16 @@ export default {
 
 .is-size-7 {
   font-family: monospace;
+}
+
+.icon {
+  margin: 20px;
+}
+
+.badge {
+  padding: 0px 5px 0px 5px;
+  background: orange;
+  color: white;
+  border-radius: 50%;
 }
 </style>
