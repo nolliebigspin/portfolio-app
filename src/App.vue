@@ -16,7 +16,7 @@
       description="Hier treffen sich zukünftige Systemarchitekten, Spieleentwickler, Webdesigner, Medienpsychologen und UX-Experten."
     />
     <br>
-    <h3 class="subtitle is-3 has-text-centered">Subtitle 2</h3>
+    <h3 class="subtitle is-3 has-text-centered">Die Preisträger</h3>
     <Teaser
       motto="Beyond Surface"
       date="2019"
