@@ -34,7 +34,5 @@ export default {
 </script>
 
 <style scoped>
-a.navbar-item {
-  text-transform: uppercase;
-}
+@import "./MenuBar.css";
 </style>
