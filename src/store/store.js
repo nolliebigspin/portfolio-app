@@ -5,11 +5,11 @@ import Vuex from 'vuex';
 Vue.use(Vuex)
 
 // modules
-import counter from './modules/counter';
+import posts from './modules/posts';
 
 export default new Vuex.Store({
     strict: true,
     modules: {
-        counter
+        posts
     }
 });
