@@ -1,25 +1,20 @@
+import { StoreTypes } from '../types';
+
 export default {
-    namespaced: true,
     strict: true,
     state: {
         count: 0
     },
     getters: {
-        count(state) {
+        [StoreTypes.counter.getters.COUNT](state) {
             return state.count;
         }
     },
     mutations: {
-        increment(state) {
-            state.count++;
-        },
-        decrement(state) {
-            state.count--;
-        },
-        changeBy(state, payload) {
+        [StoreTypes.counter.mutations.CHANGE_BY](state, payload) {
             state.count += payload.amount;
         },
-        setTo(state, payload) {
+        [StoreTypes.counter.mutations.SET_TO](state, payload) {
             state.count = payload.value
         }
     }

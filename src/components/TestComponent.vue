@@ -4,9 +4,9 @@
       <h1 class="title">The counter: <span>{{ count }}</span></h1>
       <h2 class="subtitle">
         <button @click="changeBy(5)">++</button>
-        <button @click="increment">+</button>
+        <button @click="changeBy(1)">+</button>
         <button @click="setTo(0)">0</button>
-        <button @click="decrement">-</button>
+        <button @click="changeBy(-1)">-</button>
         <button @click="changeBy(-5)">--</button>
       </h2>
     </div>
@@ -14,31 +14,28 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+import { StoreTypes } from '@/store/types'
+
 export default {
   methods: {
-    increment() {
-      this.$store.commit('counter/increment');
-    },
-    decrement() {
-      this.$store.commit('counter/decrement');
-    },
     changeBy(amount) {
       this.$store.commit({
-        type: 'counter/changeBy',
+        type: StoreTypes.counter.mutations.CHANGE_BY,
         amount
       });
     },
     setTo(value) {
       this.$store.commit({
-        type: 'counter/setTo',
+        type: StoreTypes.counter.mutations.SET_TO,
         value
       })
     }
   },
   computed: {
-    count() {
-      return this.$store.getters['counter/count'];
-    }
+    ...mapGetters({
+      count: StoreTypes.counter.getters.COUNT
+    })
   }
 }
 </script>
