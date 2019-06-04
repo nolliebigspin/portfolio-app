@@ -5,6 +5,7 @@
       <h2 class="subtitle">
         <button @click="changeBy(5)">++</button>
         <button @click="increment">+</button>
+        <button @click="setTo(0)">0</button>
         <button @click="decrement">-</button>
         <button @click="changeBy(-5)">--</button>
       </h2>
@@ -26,6 +27,12 @@ export default {
         type: 'counter/changeBy',
         amount
       });
+    },
+    setTo(value) {
+      this.$store.commit({
+        type: 'counter/setTo',
+        value
+      })
     }
   },
   computed: {

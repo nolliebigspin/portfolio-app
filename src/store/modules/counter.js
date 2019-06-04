@@ -19,5 +19,8 @@ export default {
         changeBy(state, payload) {
             state.count += payload.amount;
         },
+        setTo(state, payload) {
+            state.count = payload.value
+        }
     }
 }

@@ -7,7 +7,7 @@ Vue.use(Vuex)
 // modules
 import counter from './modules/counter';
 
-export const store = new Vuex.Store({
+export default new Vuex.Store({
     strict: true,
     modules: {
         counter
