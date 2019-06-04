@@ -1,5 +1,4 @@
 <template>
-
   <div class="container">
     <section class="section">
       <h4 class="subtitle is-4">{{ motto }}</h4>
@@ -37,18 +36,19 @@
       </section>
     </section>
   </div>
-
 </template>
 
 <script>
 export default {
-  name: "Teaser",
+  name: "MottoGroup",
   props: {
     motto: {
       type: String,
+      default: ""
     },
     date: {
       type: String,
+      default: ""
     }
   },
   components: {
@@ -61,22 +61,5 @@ export default {
 </script>
 
 <style scoped>
-.box {
-  border-radius: 0%;
-}
-
-.is-size-7 {
-  font-family: monospace;
-}
-
-.icon {
-  margin: 20px;
-}
-
-.badge {
-  padding: 0px 5px 0px 5px;
-  background: orange;
-  color: white;
-  border-radius: 50%;
-}
+@import "./MottoGroup.css";
 </style>

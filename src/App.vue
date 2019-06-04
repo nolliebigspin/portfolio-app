@@ -16,29 +16,28 @@
       description="Hier treffen sich zukünftige Systemarchitekten, Spieleentwickler, Webdesigner, Medienpsychologen und UX-Experten."
     />
     <TestComponent />
-    <Teaser
+    <MottoGroup
       motto="Beyond Surface"
       date="2019"
     />
-    <Teaser />
-    <Teaser />
+    <!--
+    <MottoGroup />
+    <MottoGroup />
+    -->
   </div>
 </template>
 
 <script>
 const MenuBar = () => import("./components/MenuBar/MenuBar");
 const Hero = () => import("./components/Hero/Hero");
-const Teaser = () => import("./components/Teaser/Teaser");
-
-const TestComponent = () => import("./components/TestComponent");
+const MottoGroup = () => import("./components/MottoGroup/MottoGroup");
 
 export default {
   name: 'App',
   components: {
     MenuBar,
     Hero,
-    TestComponent,
-    Teaser
+    MottoGroup
   }
 }
 </script>
