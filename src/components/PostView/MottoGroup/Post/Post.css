@@ -1,18 +1,18 @@
-.box {
-    border-radius: 0%;
-  }
-  
-  .is-size-7 {
-    font-family: monospace;
-  }
-  
-  .icon {
-    margin: 20px;
-  }
-  
-  .badge {
-    padding: 0px 5px 0px 5px;
-    background: orange;
-    color: white;
-    border-radius: 50%;
-  }
+section.card {
+  margin-bottom: 40px;
+}
+
+figure.image img {
+  object-fit: cover;
+}
+
+.taglist {
+  margin-top: 2vh;
+}
+
+.icon::after {
+  padding: 0px 5px 0px 5px;
+  background: orange;
+  color: white;
+  border-radius: 1000px;
+}

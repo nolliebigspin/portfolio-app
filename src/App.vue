@@ -33,9 +33,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.container {
-  background: #eeeeee;
-}
-</style>

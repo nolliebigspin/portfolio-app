@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "axion": "^0.1.0",
+    "buefy": "^0.7.7",
     "bulma": "^0.7.5",
     "bulma-badge": "^3.0.1",
     "core-js": "^2.6.5",

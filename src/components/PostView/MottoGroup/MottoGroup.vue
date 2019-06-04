@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <section class="section">
-      <h4 class="subtitle is-4">{{ motto }}</h4>
-      <h5 class="subtitle is-5">{{ date }}</h5>
+      <h4 class="subtitle is-3">{{ motto }}</h4>
+      <h5 class="subtitle is-6">Jahr: {{ date }}</h5>
       <!-- Load Posts here -->
       <div>
         <!-- Fuck dashes... -->
