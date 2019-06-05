@@ -5,11 +5,11 @@ import Vuex from 'vuex';
 Vue.use(Vuex)
 
 // modules
-import posts from './modules/posts';
+import PostsModule from './modules/posts';
 
 export default new Vuex.Store({
-    strict: true,
+    strict: process.env.NODE_ENV !== 'production',
     modules: {
-        posts
+        posts: PostsModule
     }
 });
