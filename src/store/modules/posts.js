@@ -21,7 +21,7 @@ export default {
     actions: {
         [StoreTypes.posts.actions.FETCH_ALL]({ commit }) {
             // TODO: fetch posts from api
-            fetch('/api/posts')
+            fetch('/api/posts?sort=date+dsc')
                 .then((response) => {
                     response.json().then(data => {
                         commit(StoreTypes.posts.mutations.SET_POSTS, data);

@@ -40,12 +40,6 @@ export default {
         return "This is a Hero description text.";
       }
     }
-  },
-  components: {
-
-  },
-  data() {
-    return {}
   }
 }
 </script>
