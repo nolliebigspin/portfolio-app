@@ -15,7 +15,7 @@
     <section class="hero">
       <div class="hero-body has-text-centered">
         <div class="container">
-          <h1 class="title">
+          <h1 class="subtitle is-2">
             Die Preisträger:
           </h1>
         </div>
