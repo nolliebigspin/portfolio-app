@@ -1,17 +1,20 @@
 <template>
-  <div class="container">
+  <div
+    class="container"
+    v-if="post !== null"
+  >
     <section class="section">
       <p class="is-size-2">{{ post.headline }}</p>
       <div class="columns">
         <div class="column is-three-quarters">
-          <p class="is-size-7">{{ participants }}</p>
+          <p class="is-size-7">{{ post.participants.join(", ") }}</p>
           <p class="is-size-5">{{ post.text }}</p>
         </div>
         <div class="column">
           <p class="subtitle is-2">Likes</p>
           <hr>
           <div class="columns">
-            <i class=" column is-half fas fa-heart"> x{{post.likes }}</i>
+            <i class=" column is-half fas fa-heart"> x{{ post.likes }}</i>
             <button class="button is-info">+1</button>
           </div>
           <p class="subtitle is-2">Tags</p>
@@ -42,7 +45,6 @@
 const PostPagePictures = () => import("./PostPagePictures/PostPagePictures");
 const PostPageComments = () => import("./PostPageComments/PostPageComments");
 
-
 export default {
   name: "PostPage",
   props: {
@@ -56,31 +58,26 @@ export default {
   },
   data() {
     return {
-      post: {}
-    }
+      post: null
+    };
   },
-  computed: {
-    participants() {
-      return this.post.participants.join(", ");
-    }
-  },
-  mounted() {
+  beforeMount() {
     this.getPost();
   },
   methods: {
     getPost() {
       fetch(`/api/posts/${this.postId}`)
-        .then((response) => {
+        .then(response => {
           response.json().then(data => {
             this.post = data;
-          })
+          });
         })
-        .catch((error) => {
+        .catch(error => {
           alert("Failed to fetch data: " + error);
         });
     }
   }
-}
+};
 </script>
 
 <style scoped>
