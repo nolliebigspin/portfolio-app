@@ -11,6 +11,9 @@ export default {
         },
         [StoreTypes.posts.getters.POSTS_FILTER_MOTTO](state, filter) {
             return state.posts.filter(post => post.motto === filter);
+        },
+        [StoreTypes.posts.getters.POST_BY_ID](state, id) {
+            return state.posts.filter(post => post._id === id);
         }
     },
     mutations: {

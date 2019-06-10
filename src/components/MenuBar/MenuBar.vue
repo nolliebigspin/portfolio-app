@@ -6,11 +6,17 @@
   >
     <div class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item">EMI-Award</a>
+        <router-link
+          :to="{name: 'home'}"
+          class="navbar-item"
+        >EMI-Award</router-link>
       </div>
 
       <div class="navbar-end">
-        <a class="navbar-item">Home</a>
+        <router-link
+          :to="{name: 'home'}"
+          class="navbar-item"
+        >Home</router-link>
         <a class="navbar-item">About</a>
         <a class="navbar-item">Portfolio</a>
         <a class="navbar-item">Contact</a>
