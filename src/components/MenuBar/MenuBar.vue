@@ -33,6 +33,4 @@ export default {
 }
 </script>
 
-<style scoped>
-@import "./MenuBar.css";
-</style>
+<style src="./MenuBar.css" scoped></style>

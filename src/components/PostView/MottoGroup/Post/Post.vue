@@ -86,6 +86,4 @@ export default {
 }
 </script>
 
-<style scoped>
-@import "./Post.css";
-</style>
+<style src="./Post.css" scoped></style>
