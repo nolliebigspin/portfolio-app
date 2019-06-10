@@ -11,7 +11,7 @@
           <p class="subtitle is-2">Likes</p>
           <hr>
           <div class="columns">
-            <i class=" column is-half fas fa-heart">x{{ post.likes }}</i>
+            <i class=" column is-half fas fa-heart"> x{{post.likes }}</i>
             <button class="button is-info">+1</button>
           </div>
           <p class="subtitle is-2">Tags</p>
