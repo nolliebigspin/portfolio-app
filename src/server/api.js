@@ -75,7 +75,8 @@ router.put('/posts/:post_id', (req, res) => {
     },
     {
       $set: {
-        name: req.body
+        name: req.body.name,
+        comments: req.body.comments
       }
     }
   )

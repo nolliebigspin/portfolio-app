@@ -8,14 +8,19 @@
           class="input"
           type="text"
           placeholder="Titel..."
+          v-model="title"
         >
       </div>
       <textarea
         class="textarea"
         placeholder="Kommentar..."
+        v-model="body"
       ></textarea>
     </div>
-    <button class="button is-info is-pulled-right field control">Senden</button>
+    <button
+      class="button is-info is-pulled-right field control"
+      @click="submit"
+    >Senden</button>
     <div
       class="field control"
       v-for="comment in comments"
@@ -32,6 +37,12 @@
 <script>
 export default {
   name: 'PostPageComments',
+  data() {
+    return {
+      title: "",
+      body: ""
+    }
+  },
   props: {
     comments: {
       type: Array,
@@ -39,6 +50,14 @@ export default {
       default() {
         return []
       }
+    }
+  },
+  methods: {
+    submit() {
+      this.$emit("onComment", {
+        title: this.title,
+        body: this.body
+      });
     }
   }
 

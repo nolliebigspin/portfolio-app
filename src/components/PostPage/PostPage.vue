@@ -29,14 +29,17 @@
             </b-tag>
           </b-taglist>
         </div>
-        
+
       </div>
     </section>
     <section class="section">
       <PostPagePictures :images="post.images" />
     </section>
     <section class="section">
-      <PostPageComments :comments="post.comments" />
+      <PostPageComments
+        :comments="post.comments"
+        @onComment="postComment"
+      />
     </section>
   </div>
 </template>
@@ -71,6 +74,24 @@ export default {
           response.json().then(data => {
             this.post = data;
           });
+        })
+        .catch(error => {
+          alert("Failed to fetch data: " + error);
+        });
+    },
+    postComment(payload) {
+
+      this.post.comments.push({
+        title: payload.title,
+        "body-text": payload.body
+      });
+
+      fetch(`/api/posts/${this.postId}`, {
+        method: 'PUT',
+        body: JSON.stringify(this.post)
+      })
+        .then(response => {
+          alert("Comment sent: " + response);
         })
         .catch(error => {
           alert("Failed to fetch data: " + error);
