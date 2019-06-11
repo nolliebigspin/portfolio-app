@@ -10,6 +10,7 @@
           <p class="is-size-7">{{ post.participants.join(", ") }}</p>
           <p class="is-size-5">{{ post.text }}</p>
         </div>
+
         <div class="column">
           <p class="subtitle is-2">Likes</p>
           <hr>
@@ -19,7 +20,6 @@
           </div>
           <p class="subtitle is-2">Tags</p>
           <hr>
-
           <b-taglist class="taglist">
             <b-tag
               rounded
@@ -28,8 +28,8 @@
             >{{ tag }}
             </b-tag>
           </b-taglist>
-
         </div>
+        
       </div>
     </section>
     <section class="section">

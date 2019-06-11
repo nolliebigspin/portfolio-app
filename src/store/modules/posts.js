@@ -19,7 +19,7 @@ export default {
     mutations: {
         [StoreTypes.posts.mutations.SET_POSTS](state, posts) {
             state.posts = posts;
-        },
+        }
     },
     actions: {
         [StoreTypes.posts.actions.FETCH_ALL](ctx) {
