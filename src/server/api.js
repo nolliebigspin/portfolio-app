@@ -73,12 +73,7 @@ router.put('/posts/:post_id', (req, res) => {
     {
       _id: post_id
     },
-    {
-      $set: {
-        name: req.body.name,
-        comments: req.body.comments
-      }
-    }
+    req.body
   )
     .then(value => {
       console.log(`> changed post ${post_id}!`);

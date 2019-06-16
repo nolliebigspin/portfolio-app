@@ -16,7 +16,10 @@
           <hr>
           <div class="columns">
             <i class=" column is-half fas fa-heart"> x{{ post.likes }}</i>
-            <button class="button is-info">+1</button>
+            <button
+              class="button is-info"
+              @click="like"
+            >+1</button>
           </div>
           <p class="subtitle is-2">Tags</p>
           <hr>
@@ -38,7 +41,7 @@
     <section class="section">
       <PostPageComments
         :comments="post.comments"
-        @onComment="postComment"
+        @onComment="comment"
       />
     </section>
   </div>
@@ -79,23 +82,28 @@ export default {
           alert("Failed to fetch data: " + error);
         });
     },
-    postComment(payload) {
-
+    comment(payload) {
       this.post.comments.push({
         title: payload.title,
         "body-text": payload.body
       });
-
+      this.updatePost();
+    },
+    like() {
+      this.post.likes += 1;
+      this.updatePost();
+    },
+    updatePost() {
       fetch(`/api/posts/${this.postId}`, {
-        method: 'PUT',
+        method: "PUT",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        },
         body: JSON.stringify(this.post)
-      })
-        .then(response => {
-          alert("Comment sent: " + response);
-        })
-        .catch(error => {
-          alert("Failed to fetch data: " + error);
-        });
+      }).catch(error => {
+        alert("Failed to fetch data: " + error);
+      });
     }
   }
 };
